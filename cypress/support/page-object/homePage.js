@@ -1,10 +1,10 @@
 class HomePage {
     get inputSearch() {
-        return cy.get("#search-field-top-bar");
+        return cy.get("#search_query_top");
     }
 
     get buttonLupka() {
-        return cy.get('#search-top-bar-submit');
+        return cy.get('[name="submit_search"]');
     }
 
     enterPhrase(text, delayValue) {

@@ -1,7 +1,10 @@
 {
-    "baseUrl": "https://skleptest.pl",
+    "baseUrl": "http://www.automationpractice.pl/index.php",
     "includeShadowDom": true,
     "chromeWebSecurity": true,
     "viewportHeight": 1080,
-    "viewportWidth": 1920
+    "viewportWidth": 1920,
+    "projectId": "7pv7ct"
 }
+
+
