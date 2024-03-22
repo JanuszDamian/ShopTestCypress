@@ -1,15 +1,21 @@
 class HomePage {
     get inputSearch() {
-        return cy.get("#search_query_top");
+        return cy.get("#search-field-top-bar");
     }
 
     get buttonLupka() {
-        return cy.get("name=['submit_search']");
+        return cy.get('#search-top-bar-submit');
     }
 
-    searchPhrase(text, delayValue) {
-        this.inputSearch.type(text, {delay: delayValue})
+    enterPhrase(text, delayValue) {
+        this.inputSearch.type(text, {delay: delayValue});
     }
+
+    searchPhrase() {
+        this.buttonLupka.click();
+    }
+
+
 }
 
 export default new HomePage();
