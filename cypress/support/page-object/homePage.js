@@ -7,12 +7,20 @@ class HomePage {
         return cy.get('[name="submit_search"]');
     }
 
+    get noResultText() {
+        return cy.get('p[class="alert alert-warning"]')
+    }
+
     enterPhrase(text, delayValue) {
         this.inputSearch.type(text, {delay: delayValue});
     }
 
     searchPhrase() {
         this.buttonLupka.click();
+    }
+
+    noResultAssert() {
+        this.noResultText.should("contain","o results were found for your search")
     }
 
 

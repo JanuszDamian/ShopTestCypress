@@ -7,5 +7,6 @@ describe("E2E - Home Page", () => {
         cy.visit("/")
         HomePage.enterPhrase("Test", 100);
         HomePage.searchPhrase();
+        HomePage.noResultAssert();
     })
 })
