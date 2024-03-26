@@ -8,7 +8,7 @@ class HomePage {
     }
 
     get noResultText() {
-        return cy.get('p[class="alert alert-warning"]')
+        return cy.get('p[class="alert alert-warning"]');
     }
 
     enterPhrase(text, delayValue) {
@@ -20,9 +20,8 @@ class HomePage {
     }
 
     noResultAssert() {
-        this.noResultText.should("contain","o results were found for your search")
+        this.noResultText.should("contain","o results were found for your search");
     }
-
 
 }
 

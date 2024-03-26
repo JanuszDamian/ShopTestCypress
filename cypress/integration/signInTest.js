@@ -6,7 +6,8 @@ describe("E2E - Automation practice test", () => {
 
     it("SignInTest - automationpractice", () => {
         cy.visit("http://www.automationpractice.pl/index.php?controller=authentication&back=my-account")
-        SignInPage.signInFail("test@test.pl", "sdfg3423")
+        SignInPage.signInFail("test@test.pl", "rdgf657");
+        SignInPage.loginErrorAssert();
     })
 
 })
