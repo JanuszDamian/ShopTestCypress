@@ -11,6 +11,14 @@ class HomePage {
         return cy.get('p[class="alert alert-warning"]');
     }
 
+    get tShirtLink() {
+        return cy.get('a[title="T-shirts"]').eq(1)
+    }
+
+    get checkSizeM() {
+        return cy.get("#layered_id_attribute_group_2")
+    }
+
     enterPhrase(text, delayValue) {
         this.inputSearch.type(text, {delay: delayValue});
     }
@@ -21,6 +29,18 @@ class HomePage {
 
     noResultAssert() {
         this.noResultText.should("contain","o results were found for your search");
+    }
+
+    checkboxSizeTshirt() {
+        this.tShirtLink.click();
+        this.checkSizeM.click();
+    }
+
+    checkboxAssert() {
+        this.checkSizeM.invoke("prop", "checked").then(checkedValue => {
+            cy.log(checkedValue)
+        })
+
     }
 
 }
